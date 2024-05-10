@@ -19,6 +19,12 @@ sap.ui.define([
                 this.getRouter().navTo("RouteCompanyDetail",{
                     carrId: oCtx.getProperty("Carrid")
                 })
+            },
+
+            onBtnCreatePress: function(oEvent){
+                this.getRouter().navTo("RouteCompanyDetail", {
+                    carrId: "New"
+                })
             }
         });
     });

@@ -31,8 +31,8 @@
                         labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
                         columnsL="1" columnsM="1">
                         <f:content>
-                            <Label text="{i18n>CompanyID}" />
-                            <Input type="Text" value="{Carrid}" />
+                            <Label text="{i18n>CompanyID}" visible="{editCompanyModel>/isNew}" />
+                            <Input type="Text" value="{Carrid}" visible="{editCompanyModel>/isNew}" />
 
                             <Label text="{i18n>CompanyName}" />
                             <Input type="Text" value="{Carrname}" />
@@ -46,6 +46,13 @@
                     </f:SimpleForm>
                 </content>
             </Panel>
-        </content>    
+        </content>   
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button text="Salvar" type="Accept" press=".onBtnSavePress" />                
+                <Button text="Delete" type="Reject" press=".onBtnDeletePress" />
+            </OverflowToolbar>
+        </footer> 
     </Page>
 </mvc:View>
